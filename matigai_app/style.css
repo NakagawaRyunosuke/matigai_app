@@ -1,0 +1,14 @@
+header{
+    background-color: rgb(154, 199, 86);
+}
+.img{
+    width: 40%;
+    height: 40%;
+}
+.wait{
+    text-align: center;
+}
+.hidden{
+    display:none;
+}
+

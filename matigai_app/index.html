@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>間違い探し</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>間違い探し</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="contents">
+            <div class="inputArea">
+                <input type="file" id="input">
+                <button id="startBtn">開始</button>
+            </div>
+            <img src="./images/first.png" alt="preview" class="img">
+            <canvas class="img" id="canvas"></canvas>
+        </div>
+
+        <div class="wait hidden">
+            <h3>10秒ほどお待ちください。</h3>
+            <img src="./images/sorrycat.png" alt="wait">
+        </div>
+    </main>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
