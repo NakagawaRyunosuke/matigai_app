@@ -74,20 +74,17 @@ function detectObjects(imageSrc){
 
                     if(predictions[i].class == "person"){
                         rand = Math.floor(Math.random() * 2);
-                        if(i % 2 == 0){
-                            questionImg.src = "./images/dog"+rand+".png";
+                        questionImg.src = "./images/dog"+rand+".png";
                             questionImg.onload = () => {
                                 ctx.drawImage(questionImg,predictions[i].bbox[0],predictions[i].bbox[1]+predictions[i].bbox[3]-20,predictions[i].bbox[2],predictions[i].bbox[3]/2);
                                 answer.push({x:predictions[i].bbox[0],y:predictions[i].bbox[1]+predictions[i].bbox[3]-20,w:predictions[i].bbox[2],h:predictions[i].bbox[3]/2});
-                            }
-                        }else{
-                            questionImg.src = "./images/hat"+rand+".png";
-                            questionImg.onload = () => {
-                                ctx.drawImage(questionImg,predictions[i].bbox[0]+20,predictions[i].bbox[1]-10,predictions[i].bbox[2]/1.5,predictions[i].bbox[3]/6);
-                                answer.push({x:predictions[i].bbox[0],y:predictions[i].bbox[1],w:predictions[i].bbox[2],h:predictions[i].bbox[3]});
-                            }
                         }
-
+                    }else{
+                        questionImg.src = "./images/mushi.png";
+                        questionImg.onload = () => {
+                            ctx.drawImage(questionImg,predictions[i].bbox[0]+20,predictions[i].bbox[1],50,80);
+                            answer.push({x:predictions[i].bbox[0],y:predictions[i].bbox[1],w:50,h:80})
+                        }
                     }
                     
                     

@@ -1,5 +1,10 @@
 header{
-    background-color: rgb(154, 199, 86);
+    background-color: rgb(213, 219, 205);
+    border-radius: 20px;
+    border: 3px outset white;
+}
+header div h1{
+    text-align: center;
 }
 .img{
     width: 40%;
@@ -10,5 +15,8 @@ header{
 }
 .hidden{
     display:none;
+}
+html{
+    background-color: rgba(95, 193, 196, 0.696);
 }
 
