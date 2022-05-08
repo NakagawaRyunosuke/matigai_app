@@ -51,7 +51,9 @@ canvas.onclick = function(e){
 }
 
 function detectObjects(imageSrc){
+    answer = [];
     let ctx = canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
     let image = new Image();
     image.src = imageSrc;
     //間違い用画像描画
@@ -67,7 +69,7 @@ function detectObjects(imageSrc){
                     if(i > 3) break;
                     var obj = predictions[i];
 					var box = obj.bbox;
-					drawRect(box[0], box[1], box[2], box[3]);
+					//drawRect(box[0], box[1], box[2], box[3]);
 
                     let ctx = canvas.getContext("2d");
                     let questionImg = new Image(); 

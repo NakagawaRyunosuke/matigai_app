@@ -1,5 +1,5 @@
 header{
-    background-color: rgb(213, 219, 205);
+    background-color: rgb(196, 228, 154);
     border-radius: 20px;
     border: 3px outset white;
 }
@@ -17,6 +17,6 @@ header div h1{
     display:none;
 }
 html{
-    background-color: rgba(95, 193, 196, 0.696);
+    background-color: rgba(95, 196, 141, 0.696);
 }
 
